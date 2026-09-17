@@ -1,0 +1,127 @@
+/* header */
+.bg-marca {
+  background: linear-gradient(135deg, #508698 0%, #086899 100%);
+}
+/* botão WhatsApp */
+.btn-whatsapp {
+  background-color: #25D366;
+  border-color: #25D366;
+  color: #ffffff;
+  transition: all 0.3s ease; 
+}
+/* hover do botão WhatsApp */
+.btn-whatsapp:hover {
+  background-color: #1ebe5d;
+  border-color: #1ebe5d;
+  color: #ffffff;
+}
+
+/* Fale conosco */
+.bg-gradient-blue {
+  background: linear-gradient(135deg, #086899 0%, #508698 100%);
+}
+
+.btn-gradient {
+  background: linear-gradient(to right, #086899, #508698);
+  color: white;
+  border: none;
+  transition: all 0.3s ease; 
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(to right, #086899, #508698);
+  color: white;
+  filter: brightness(1.1); 
+}
+
+.form-control, .form-select {
+  background-color: #f9f9fb;
+  border: 1px solid #eaedf1;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/*sessão parceiros*/
+
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  background-color: #ffffff; 
+  /* desfoque nas laterais  */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+}
+
+/* sessão de parceiros (marquee) */
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+}
+
+.marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding-right: 5rem;
+  animation: scroll 20s linear infinite;
+}
+
+.marquee-container:hover .marquee-group {
+  animation-play-state: paused;
+}
+
+.marquee-group img {
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+  /* converção da logo para cinza*/
+  filter: grayscale(100%) opacity(0.7);
+  transition: filter 0.3s ease;
+}
+
+.marquee-group img:hover {
+  filter: grayscale(0%) opacity(1);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* sessão serviços(invisivel) */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.5s ease-out, transform 0.6s ease-out;
+}
+
+/* sessão serviços (visível) */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Atraso para efeito "cascata" */
+.coluna:nth-child(2) { transition-delay: 100ms; }
+.coluna:nth-child(3) { transition-delay: 400ms; }
