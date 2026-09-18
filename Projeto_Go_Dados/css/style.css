@@ -9,11 +9,26 @@
   color: #ffffff;
   transition: all 0.3s ease; 
 }
-/* hover do botão WhatsApp */
+
 .btn-whatsapp:hover {
   background-color: #1ebe5d;
   border-color: #1ebe5d;
   color: #ffffff;
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+}
+/*botão da sessão vídeo*/
+.btn-contato {
+    background: linear-gradient(135deg, #086899 0%, #508698 100%);
+    color: #ffffff;
+    border: none; 
+    transition: all 0.3s ease; 
+}
+
+.btn-contato:hover {
+    color: #ffffff;
+    filter: brightness(1.15);
+    transform: translateY(-2px)
 }
 
 /* Fale conosco */
@@ -29,9 +44,9 @@
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(to right, #086899, #508698);
-  color: white;
-  filter: brightness(1.1); 
+  color: #ffffff;
+    filter: brightness(1.15);
+    transform: translateY(-2px)
 }
 
 .form-control, .form-select {
@@ -88,10 +103,9 @@
 }
 
 .marquee-group img {
-  height: 150px;
+  height: 175px;
   width: auto;
   object-fit: contain;
-  /* converção da logo para cinza*/
   filter: grayscale(100%) opacity(0.7);
   transition: filter 0.3s ease;
 }
@@ -109,14 +123,14 @@
   }
 }
 
-/* sessão serviços(invisivel) */
+/* Efeito(invisivel) */
 .hidden {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1.5s ease-out, transform 0.6s ease-out;
 }
 
-/* sessão serviços (visível) */
+/* Efeito (visível) */
 .show {
   opacity: 1;
   transform: translateY(0);
@@ -125,3 +139,14 @@
 /* Atraso para efeito "cascata" */
 .coluna:nth-child(2) { transition-delay: 100ms; }
 .coluna:nth-child(3) { transition-delay: 400ms; }
+
+/* Adiciona suavidade à animação */
+.card {
+  transition: all 0.3s ease;
+}
+
+/* Aplica o efeito ao passar o mouse */
+.card:hover {
+  filter: brightness(1.00);
+  transform: translateY(-2px);
+}
