@@ -2,12 +2,38 @@
 .bg-marca {
   background: linear-gradient(135deg, #508698 0%, #086899 100%);
 }
+/*botão whatsapp flutuante */
+.btn-whatsapp-flutuante {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  text-decoration: none;
+  z-index: 1050;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-whatsapp-flutuante:hover {
+  background-color: #1ebe5d;
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+
 /* botão WhatsApp */
 .btn-whatsapp {
   background-color: #25D366;
   border-color: #25D366;
   color: #ffffff;
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
 }
 
 .btn-whatsapp:hover {
@@ -17,18 +43,19 @@
   filter: brightness(1.15);
   transform: translateY(-2px);
 }
+
 /*botão da sessão vídeo*/
 .btn-contato {
-    background: linear-gradient(135deg, #086899 0%, #508698 100%);
-    color: #ffffff;
-    border: none; 
-    transition: all 0.3s ease; 
+  background: linear-gradient(135deg, #086899 0%, #508698 100%);
+  color: #ffffff;
+  border: none;
+  transition: all 0.3s ease;
 }
 
 .btn-contato:hover {
-    color: #ffffff;
-    filter: brightness(1.15);
-    transform: translateY(-2px)
+  color: #ffffff;
+  filter: brightness(1.15);
+  transform: translateY(-2px)
 }
 
 /* Fale conosco */
@@ -40,16 +67,17 @@
   background: linear-gradient(to right, #086899, #508698);
   color: white;
   border: none;
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
 }
 
 .btn-gradient:hover {
   color: #ffffff;
-    filter: brightness(1.15);
-    transform: translateY(-2px)
+  filter: brightness(1.15);
+  transform: translateY(-2px)
 }
 
-.form-control, .form-select {
+.form-control,
+.form-select {
   background-color: #f9f9fb;
   border: 1px solid #eaedf1;
 }
@@ -65,22 +93,18 @@
   overflow: hidden;
   width: 100%;
   display: flex;
-  background-color: #ffffff; 
+  background-color: #ffffff;
   /* desfoque nas laterais  */
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 12%,
-    black 88%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 12%,
-    black 88%,
-    transparent 100%
-  );
+  mask-image: linear-gradient(to right,
+      transparent,
+      black 12%,
+      black 88%,
+      transparent 100%);
+  -webkit-mask-image: linear-gradient(to right,
+      transparent,
+      black 12%,
+      black 88%,
+      transparent 100%);
 }
 
 /* sessão de parceiros (marquee) */
@@ -118,6 +142,7 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-100%);
   }
@@ -137,8 +162,13 @@
 }
 
 /* Atraso para efeito "cascata" */
-.coluna:nth-child(2) { transition-delay: 100ms; }
-.coluna:nth-child(3) { transition-delay: 400ms; }
+.coluna:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+.coluna:nth-child(3) {
+  transition-delay: 400ms;
+}
 
 /* Adiciona suavidade à animação */
 .card {
@@ -149,4 +179,16 @@
 .card:hover {
   filter: brightness(1.00);
   transform: translateY(-2px);
+}
+
+/*sessão FAQ*/
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #086899;
+  /* Cor azul da sua marca */
+  background-color: transparent;
+  box-shadow: none;
 }
